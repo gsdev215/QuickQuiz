@@ -20,8 +20,21 @@ Based on a tutorial by [Codesistency], with extra features added by me:
 ```json
 [
   {
-    "question": "What is 2 + 2?",
-    "options": ["3", "4", "5", "6"],
-    "answer": "4"
+    "question": "What is the capital of France?",
+    "answers": [
+      { "text": "London", "correct": false },
+      { "text": "Berlin", "correct": false },
+      { "text": "Paris", "correct": true },
+      { "text": "Madrid", "correct": false }
+    ]
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answers": [
+      { "text": "Venus", "correct": false },
+      { "text": "Mars", "correct": true },
+      { "text": "Jupiter", "correct": false },
+      { "text": "Saturn", "correct": false }
+    ]
   }
 ]
