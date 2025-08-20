@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5efe6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.contanier{
+    background-color: white;
+    border-radius: 0.80rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen{
+    display: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+.screen.active{
+    display: block;
+}
+
+#screen-start h1 {
+    color: goldenrod;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#screen-start p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.quiz-header {
+    margin-bottom: 2rem;
+}
+
+#question {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.question-info{
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.answer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+
+}
+
+.answer-btn {
+    background-color: #f8f0e5;
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
+    border:  2px solid #eabbc8;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+
+.answer-btn:hover{
+    background-color: #eabbc8;
+    border-color: #dac0ae;
+}
+
+.answer-btn.correct {
+  background-color: #e6fff0;
+  border-color: #a3f0c4;
+  color: #28a745;
+}
+
+.answer-btn.incorrect{
+    background-color: #fff0f0;
+    border-color: #ffbdbd;
+    color: #dc3545;
+}
+.progress-bar{
+    height: 10px;
+    background-color: #f8f0e5;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #e86a33;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+
+#result-screen h1{
+    color: #e86a33;
+    margin-bottom: 30px;
+}
+
+.ans-info {
+    background-color: #f8f0e5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.ans-info p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#result-msg{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e86a33;
+}
+
+@media (max-width:500px){
+    .screen {
+        padding: 1rem;
+    }
+
+    #start-screen h1 {
+        font-size: 2rem;
+    }
+
+    #question-text {
+        font-size: 1.3rem;
+    }
+
+    .answer-btn {
+        padding: 12px;
+    }
+
+}
+/* -------- BUTTON STYLE 1 -------- */
+/* From Uiverse.io by cssbuttons-io */
+.btn-style1 {
+  --color: #e86a33;
+  font-family: inherit;
+  display: inline-block;
+  width: 7em;
+  height: 2.6em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.btn-style1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.btn-style1:hover {
+  color: #fff;
+}
+
+.btn-style1:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.btn-style1:active:before {
+  background: #652104;
+  transition: background 0s;
+}
+
+
+/* -------- BUTTON STYLE 2 -------- */
+/* From Uiverse.io by alexroumi */
+.btn-style2 {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #e86a33;
+  z-index: 1;
+  background: #e8e8e8;
+  --before-bg: #e86a33;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.btn-style2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: var(--before-bg);
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+}
+
+.btn-style2:hover {
+  color: #e8e8e8;
+}
+
+.btn-style2:hover::before {
+  width: 100%;
+}
